@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cpv13120p3u83"]
+
+[ext_resource type="PackedScene" uid="uid://glo54255e8fr" path="res://Cards/card_body.tscn" id="1_tbum3"]
+
+[node name="CardBody" instance=ExtResource("1_tbum3")]
+instantRessourcesNeeded = ["Money"]
+instantRessourcesNeededAmount = [1000]
+turnRessourcesGained = ["Security", "Comfort", "Home"]
+turnRessourcesGainedAmount = [1, 1, 1]

@@ -1,0 +1,288 @@
+[gd_scene load_steps=4 format=3 uid="uid://glo54255e8fr"]
+
+[ext_resource type="Script" path="res://CardBody.gd" id="1_ynpor"]
+[ext_resource type="Texture2D" uid="uid://x8sul7toipur" path="res://Icons/Ressources/Attention.png" id="2_8cmhl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aconw"]
+size = Vector2(160, 96)
+
+[node name="CardBody" type="Area2D"]
+script = ExtResource("1_ynpor")
+conditionToGetColor = Color(0.0392157, 0.0392157, 0.588235, 1)
+conditionToKeepColor = Color(0.392157, 0.392157, 0.784314, 1)
+instantNeededColor = Color(0.392157, 0.0392157, 0.0392157, 1)
+instantGainedColor = Color(0.0392157, 0.392157, 0.0392157, 1)
+turnNeededColor = Color(0.784314, 0.392157, 0.392157, 1)
+turnGainedColor = Color(0.392157, 0.784314, 0.392157, 1)
+
+[node name="Sprites" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(320, 192)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 320.0
+offset_bottom = 192.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 5
+
+[node name="R1C1" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R1C1"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R1C2" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R1C2"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R1C3" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R1C3"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R1C4" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R1C4"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R1C5" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R1C5"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R2C1" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R2C1"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R2C2" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R2C2"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R2C3" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R2C3"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R2C4" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R2C4"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R2C5" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R2C5"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R3C1" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R3C1"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R3C2" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R3C2"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R3C3" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R3C3"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R3C4" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R3C4"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="R3C5" type="ColorRect" parent="Sprites"]
+z_as_relative = false
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="Ressource" type="TextureRect" parent="Sprites/R3C5"]
+visible = false
+layout_mode = 2
+offset_right = 64.0
+offset_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource("2_8cmhl")
+expand_mode = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(80, 48)
+shape = SubResource("RectangleShape2D_aconw")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered" flags=18]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited" flags=18]

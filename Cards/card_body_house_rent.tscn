@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://i20rfqgvlibh"]
+
+[ext_resource type="PackedScene" uid="uid://glo54255e8fr" path="res://Cards/card_body.tscn" id="1_igifv"]
+
+[node name="CardBody" instance=ExtResource("1_igifv")]
+turnRessourcesNeeded = ["Money"]
+turnRessourcesNeededAmount = [7]
+turnRessourcesGained = ["Security", "Comfort", "Home"]
+turnRessourcesGainedAmount = [1, 1, 1]

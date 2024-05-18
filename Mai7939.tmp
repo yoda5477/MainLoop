@@ -1,0 +1,139 @@
+[gd_scene load_steps=9 format=3 uid="uid://dg4e2m0lrrq57"]
+
+[ext_resource type="Script" path="res://MainCardMenu.gd" id="1_ld164"]
+[ext_resource type="Texture2D" uid="uid://d0mekjijqbyx2" path="res://Icons/home (2).png" id="1_r7pce"]
+[ext_resource type="Texture2D" uid="uid://dfr266mntl0mp" path="res://Icons/home (3).png" id="2_dyoyo"]
+[ext_resource type="Texture2D" uid="uid://iapxhqrt343u" path="res://Icons/heart.png" id="3_j0e0o"]
+[ext_resource type="Texture2D" uid="uid://1soyv4onr66p" path="res://Icons/shopping-cart.png" id="4_1ap2w"]
+[ext_resource type="Texture2D" uid="uid://co6y054sow3ok" path="res://Icons/bulb.png" id="5_iy8u4"]
+[ext_resource type="Texture2D" uid="uid://joiicp4op32u" path="res://Icons/graduation-cap.png" id="6_t18pf"]
+[ext_resource type="Texture2D" uid="uid://dxk1kinds7dqa" path="res://Icons/bell.png" id="7_1idvn"]
+
+[node name="Node" type="Node"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuRows" type="GridContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="BuyHouseMenu" type="GridContainer" parent="Panel/MenuRows"]
+visible = false
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+columns = 11
+
+[node name="RentHouse" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("1_r7pce")
+
+[node name="BuyHouse" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("2_dyoyo")
+
+[node name="Love" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("3_j0e0o")
+
+[node name="Shopping" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("4_1ap2w")
+
+[node name="Ideas" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("5_iy8u4")
+
+[node name="Education" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("6_t18pf")
+
+[node name="Alerts" type="TextureButton" parent="Panel/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("7_1idvn")
+
+[node name="RentHouseMenu" type="GridContainer" parent="Panel/MenuRows"]
+visible = false
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+columns = 11
+
+[node name="RentHouse" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("1_r7pce")
+
+[node name="BuyHouse" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("2_dyoyo")
+
+[node name="Love" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("3_j0e0o")
+
+[node name="Shopping" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("4_1ap2w")
+
+[node name="Ideas" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("5_iy8u4")
+
+[node name="Education" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("6_t18pf")
+
+[node name="Alerts" type="TextureButton" parent="Panel/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("7_1idvn")
+
+[node name="MainCardMenu" type="GridContainer" parent="Panel/MenuRows"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+columns = 11
+script = ExtResource("1_ld164")
+
+[node name="RentHouse" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("1_r7pce")
+
+[node name="BuyHouse" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("2_dyoyo")
+
+[node name="Love" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("3_j0e0o")
+
+[node name="Shopping" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("4_1ap2w")
+
+[node name="Ideas" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("5_iy8u4")
+
+[node name="Education" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("6_t18pf")
+
+[node name="Alerts" type="TextureButton" parent="Panel/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("7_1idvn")
+
+[connection signal="button_up" from="Panel/MenuRows/MainCardMenu/RentHouse" to="Panel/MenuRows/MainCardMenu" method="_on_buy_house_button_down" binds= [NodePath("../../RentHouseMenu")]]
+[connection signal="button_down" from="Panel/MenuRows/MainCardMenu/BuyHouse" to="Panel/MenuRows/MainCardMenu" method="_on_buy_house_button_down" binds= [NodePath("../../BuyHouseMenu")]]

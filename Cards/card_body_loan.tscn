@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://dym0vxtwv6bp3"]
+
+[ext_resource type="PackedScene" uid="uid://glo54255e8fr" path="res://Cards/card_body.tscn" id="1_hmu14"]
+
+[node name="CardBody" instance=ExtResource("1_hmu14")]
+conditionRessourcesToKeep = ["Debt"]
+conditionRessourcesToKeepMinAmount = [1]
+instantRessourcesGained = ["Money", "Debt"]
+instantRessourcesGainedAmount = [1000, 1100]
+turnRessourcesNeeded = ["Money", "Debt"]
+turnRessourcesNeededAmount = [10, 10]

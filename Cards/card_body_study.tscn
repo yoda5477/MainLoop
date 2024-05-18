@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://crv57ctcapnce"]
+
+[ext_resource type="PackedScene" uid="uid://glo54255e8fr" path="res://Cards/card_body.tscn" id="1_1ocdu"]
+
+[node name="CardBody" instance=ExtResource("1_1ocdu")]
+conditionRessourcesToGet = ["Security"]
+conditionRessourcesToGetMinAmount = [1]
+conditionRessourcesToKeep = ["Security"]
+conditionRessourcesToKeepMinAmount = [1]

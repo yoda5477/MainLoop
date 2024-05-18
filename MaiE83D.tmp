@@ -1,0 +1,277 @@
+[gd_scene load_steps=24 format=3 uid="uid://dg4e2m0lrrq57"]
+
+[ext_resource type="Script" path="res://MainCardMenu.gd" id="1_ld164"]
+[ext_resource type="PackedScene" uid="uid://glo54255e8fr" path="res://Cards/card_body.tscn" id="1_pd56c"]
+[ext_resource type="PackedScene" uid="uid://ccng5d2toqx11" path="res://Cards/card_body_house_buy.tscn" id="1_pmwn3"]
+[ext_resource type="Script" path="res://MenuRows.gd" id="2_4mh68"]
+[ext_resource type="Texture2D" uid="uid://d0mekjijqbyx2" path="res://Icons/Menus/home (2).png" id="3_57o3m"]
+[ext_resource type="Texture2D" uid="uid://dfr266mntl0mp" path="res://Icons/Menus/home (3).png" id="4_3iawl"]
+[ext_resource type="Texture2D" uid="uid://iapxhqrt343u" path="res://Icons/Menus/heart.png" id="5_abwuo"]
+[ext_resource type="Texture2D" uid="uid://1soyv4onr66p" path="res://Icons/Menus/shopping-cart.png" id="6_cpnig"]
+[ext_resource type="Texture2D" uid="uid://co6y054sow3ok" path="res://Icons/Menus/bulb.png" id="7_l2lss"]
+[ext_resource type="Texture2D" uid="uid://joiicp4op32u" path="res://Icons/Menus/graduation-cap.png" id="8_egxqn"]
+[ext_resource type="Texture2D" uid="uid://dxk1kinds7dqa" path="res://Icons/Menus/bell.png" id="9_yn4bs"]
+[ext_resource type="Texture2D" uid="uid://8xen0e7oryer" path="res://Icons/Ressources/Age.png" id="12_4wc8d"]
+[ext_resource type="Script" path="res://Ressource.gd" id="13_mw6bu"]
+[ext_resource type="Texture2D" uid="uid://chhbvxbvitmff" path="res://Icons/Ressources/Debt.png" id="14_w1t63"]
+[ext_resource type="Texture2D" uid="uid://x8sul7toipur" path="res://Icons/Ressources/Attention.png" id="15_h1tfr"]
+[ext_resource type="Texture2D" uid="uid://cwgl4eodgylpu" path="res://Icons/Ressources/Education.png" id="16_vrxuq"]
+[ext_resource type="Texture2D" uid="uid://cglrbcueh7gh6" path="res://Icons/Ressources/Comfort.png" id="17_m8p4o"]
+[ext_resource type="Texture2D" uid="uid://kjhi3nq3abnc" path="res://Icons/Ressources/Home.png" id="18_l8gr1"]
+[ext_resource type="Texture2D" uid="uid://ouip1cv47hvj" path="res://Icons/Ressources/Money.png" id="19_y57u0"]
+[ext_resource type="Texture2D" uid="uid://c0e8q7bf6qwsm" path="res://Icons/Ressources/Security.png" id="20_cln43"]
+[ext_resource type="Texture2D" uid="uid://cveug8w41k45e" path="res://Icons/Ressources/Restfullness.png" id="21_5s8qg"]
+[ext_resource type="PackedScene" uid="uid://c7io2mwmjqo0w" path="res://Cards/card_body_loan.tscn" id="21_70a64"]
+[ext_resource type="Texture2D" uid="uid://cewgg1vmdh5ib" path="res://Icons/Ressources/Food.png" id="22_cud7y"]
+
+[node name="Node" type="Node"]
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="Panel"]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="RessourceRow" type="GridContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 20
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="Panel/GridContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="CardBody3" parent="Panel/GridContainer/ScrollContainer/Panel" instance=ExtResource("1_pmwn3")]
+position = Vector2(-133.923, 109.432)
+
+[node name="CardBody2" parent="Panel/GridContainer/ScrollContainer/Panel" instance=ExtResource("1_pd56c")]
+z_index = 1
+position = Vector2(218, 294)
+
+[node name="CardBody" parent="Panel/GridContainer/ScrollContainer/Panel" instance=ExtResource("1_pd56c")]
+z_index = 1
+position = Vector2(109, 147)
+
+[node name="MenuRows" type="GridContainer" parent="Panel/GridContainer"]
+layout_mode = 2
+script = ExtResource("2_4mh68")
+cardPanel = null
+
+[node name="BuyHouseMenu" type="GridContainer" parent="Panel/GridContainer/MenuRows"]
+visible = false
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+columns = 11
+
+[node name="RentHouse" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+action_mode = 0
+keep_pressed_outside = true
+texture_normal = ExtResource("3_57o3m")
+
+[node name="BuyHouse" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("4_3iawl")
+
+[node name="Love" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("5_abwuo")
+
+[node name="Shopping" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("6_cpnig")
+
+[node name="Ideas" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("7_l2lss")
+
+[node name="Education" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("8_egxqn")
+
+[node name="Alerts" type="TextureButton" parent="Panel/GridContainer/MenuRows/BuyHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("9_yn4bs")
+
+[node name="RentHouseMenu" type="GridContainer" parent="Panel/GridContainer/MenuRows"]
+visible = false
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+columns = 11
+
+[node name="RentHouse" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("3_57o3m")
+
+[node name="BuyHouse" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("4_3iawl")
+
+[node name="Love" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("5_abwuo")
+
+[node name="Shopping" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("6_cpnig")
+
+[node name="Ideas" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("7_l2lss")
+
+[node name="Education" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("8_egxqn")
+
+[node name="Alerts" type="TextureButton" parent="Panel/GridContainer/MenuRows/RentHouseMenu"]
+layout_mode = 2
+texture_normal = ExtResource("9_yn4bs")
+
+[node name="MainCardMenu" type="GridContainer" parent="Panel/GridContainer/MenuRows"]
+layout_direction = 2
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+columns = 11
+script = ExtResource("1_ld164")
+
+[node name="RentHouse" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("3_57o3m")
+
+[node name="BuyHouse" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("4_3iawl")
+
+[node name="Love" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("5_abwuo")
+
+[node name="Shopping" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("6_cpnig")
+
+[node name="Ideas" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("7_l2lss")
+
+[node name="Education" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("8_egxqn")
+
+[node name="Alerts" type="TextureButton" parent="Panel/GridContainer/MenuRows/MainCardMenu"]
+layout_mode = 2
+texture_normal = ExtResource("9_yn4bs")
+
+[node name="RessourceManager" type="Node" parent="."]
+
+[node name="Age" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("12_4wc8d")
+script = ExtResource("13_mw6bu")
+
+[node name="Attention" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("15_h1tfr")
+script = ExtResource("13_mw6bu")
+
+[node name="Comfort" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("17_m8p4o")
+script = ExtResource("13_mw6bu")
+
+[node name="Debt" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("14_w1t63")
+script = ExtResource("13_mw6bu")
+
+[node name="Education" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("16_vrxuq")
+script = ExtResource("13_mw6bu")
+
+[node name="Food" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("22_cud7y")
+script = ExtResource("13_mw6bu")
+
+[node name="Home" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("18_l8gr1")
+script = ExtResource("13_mw6bu")
+
+[node name="Money" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("19_y57u0")
+script = ExtResource("13_mw6bu")
+
+[node name="Restfulness" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("21_5s8qg")
+script = ExtResource("13_mw6bu")
+
+[node name="Security" type="Sprite2D" parent="RessourceManager"]
+visible = false
+texture = ExtResource("20_cln43")
+script = ExtResource("13_mw6bu")
+
+[node name="CardManager" type="Node" parent="."]
+
+[node name="HouseBuyCard" parent="CardManager" instance=ExtResource("21_70a64")]
+unique_name_in_owner = true
+visible = false
+instantRessourcesGained = [NodePath("../../RessourceManager/Money"), NodePath("../../RessourceManager/Debt")]
+turnRessourcesNeeded = [NodePath("../../RessourceManager/Money"), NodePath("../../RessourceManager/Debt")]
+
+[node name="StudyCard" parent="CardManager" instance=ExtResource("21_70a64")]
+visible = false
+conditionRessourcesToGet = [NodePath("../../RessourceManager/Security")]
+conditionRessourcesToGetMinAmount = [1]
+instantRessourcesGained = []
+instantRessourcesGainedAmount = []
+turnRessourcesNeeded = [NodePath("../../RessourceManager/Restfulness")]
+turnRessourcesNeededAmount = [1]
+turnRessourcesNeededOptionnal = [NodePath("../../RessourceManager/Attention"), NodePath("../../RessourceManager/Comfort")]
+turnRessourcesNeededOptionnalMaxAmount = [-1, 3]
+turnRessourcesGainedPotential = [NodePath("../../RessourceManager/Education")]
+
+[node name="HeroCard" parent="CardManager" instance=ExtResource("21_70a64")]
+visible = false
+instantRessourcesGained = []
+instantRessourcesGainedAmount = []
+turnRessourcesNeeded = [NodePath("../../RessourceManager/Food")]
+turnRessourcesNeededAmount = [1]
+turnRessourcesGained = [NodePath("../../RessourceManager/Age"), NodePath("../../RessourceManager/Attention")]
+turnRessourcesGainedAmount = [1, 24]
+
+[node name="LoanCard" parent="CardManager" instance=ExtResource("21_70a64")]
+visible = false
+instantRessourcesGained = [NodePath("../../RessourceManager/Money"), NodePath("../../RessourceManager/Debt")]
+turnRessourcesNeeded = [NodePath("../../RessourceManager/Money"), NodePath("../../RessourceManager/Debt")]
+
+[connection signal="mouse_exited" from="Panel/GridContainer/MenuRows" to="Panel/GridContainer/MenuRows" method="_on_mouse_exited"]
+[connection signal="button_down" from="Panel/GridContainer/MenuRows/BuyHouseMenu/RentHouse" to="Panel/GridContainer/MenuRows" method="_on_menu_button_down" binds= ["res://Cards/card_body.tscn"]]
+[connection signal="button_up" from="Panel/GridContainer/MenuRows/BuyHouseMenu/RentHouse" to="Panel/GridContainer/MenuRows" method="_on_menu_button_up"]
+[connection signal="mouse_exited" from="Panel/GridContainer/MenuRows/BuyHouseMenu/RentHouse" to="Panel/GridContainer/MenuRows" method="_on_mouse_exited"]
+[connection signal="button_up" from="Panel/GridContainer/MenuRows/MainCardMenu/RentHouse" to="Panel/GridContainer/MenuRows/MainCardMenu" method="_on_button_up" binds= [NodePath("../../RentHouseMenu")]]
+[connection signal="button_up" from="Panel/GridContainer/MenuRows/MainCardMenu/BuyHouse" to="Panel/GridContainer/MenuRows/MainCardMenu" method="_on_button_up" binds= [NodePath("../../BuyHouseMenu")]]
